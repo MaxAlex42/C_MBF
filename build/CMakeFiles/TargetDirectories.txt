@@ -1,0 +1,5 @@
+/home/maxi/Github Projects/C_MBF/build/CMakeFiles/lib_test.dir
+/home/maxi/Github Projects/C_MBF/build/CMakeFiles/run_tests.dir
+/home/maxi/Github Projects/C_MBF/build/CMakeFiles/test.dir
+/home/maxi/Github Projects/C_MBF/build/CMakeFiles/edit_cache.dir
+/home/maxi/Github Projects/C_MBF/build/CMakeFiles/rebuild_cache.dir

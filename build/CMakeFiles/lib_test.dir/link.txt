@@ -1,0 +1,1 @@
+/usr/bin/cc -g -Wall CMakeFiles/lib_test.dir/test.c.o CMakeFiles/lib_test.dir/arrays.c.o CMakeFiles/lib_test.dir/anagram.c.o CMakeFiles/lib_test.dir/gcd.c.o "CMakeFiles/lib_test.dir/linked-list.c.o" CMakeFiles/lib_test.dir/PrimeTest.c.o -o lib_test  -lcmocka
