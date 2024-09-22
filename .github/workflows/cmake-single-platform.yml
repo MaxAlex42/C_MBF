@@ -39,9 +39,9 @@ jobs:
       run: ctest --output-on-failure -C ${{env.BUILD_TYPE}}
 
     # Generate code coverage report
-    - name: Code coverage report (HTML)
+    - name: Code coverage report
       working-directory: ${{github.workspace}}/build
-      run: gcovr --root ${{github.workspace}} --exclude-directories "tests/" --branches --verbose --html --html-details --output coverage.html
+      run: gcovr --root ${{github.workspace}} --exclude-directories "tests/" --branches --verbose --txt --output coverage.txt
 
     # Upload the coverage report as an artifact
     - name: Upload coverage report
