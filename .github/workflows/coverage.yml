@@ -1,0 +1,38 @@
+name: Code Coverage
+
+on:
+  pull_request:
+    branches: [ "main" ]
+
+env:
+  BUILD_TYPE: Debug
+
+jobs:
+  coverage:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    # Download build artifacts from the build job
+    - name: Download build artifacts
+      uses: actions/download-artifact@v3
+      with:
+        name: build-artifacts
+        path: ${{github.workspace}}/build
+
+    # Install gcovr for code coverage
+    - name: Install gcovr
+      run: sudo apt-get update && sudo apt-get install -y gcovr
+
+    # Generate code coverage report
+    - name: Code coverage report
+      working-directory: ${{github.workspace}}/build
+      run: gcovr --root ${{github.workspace}} --exclude-directories "tests/" --branches --verbose --txt --output coverage.txt
+
+    # Upload the coverage report as an artifact
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: code-coverage-report
+        path: ${{github.workspace}}/build/coverage.txt
