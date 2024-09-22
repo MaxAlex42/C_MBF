@@ -7,8 +7,8 @@ on:
     branches: [ "main" ]
 
 env:
-  # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
-  BUILD_TYPE: Release
+  # Customize the CMake build type here (Debug to enable coverage)
+  BUILD_TYPE: Debug
 
 jobs:
   build:
@@ -19,7 +19,7 @@ jobs:
 
     # Install dependencies
     - name: Install dependencies on Ubuntu
-      run: sudo apt-get update && sudo apt-get install -y libcmocka-dev
+      run: sudo apt-get update && sudo apt-get install -y libcmocka-dev gcovr gcc
 
     # Delete the CMake build directory to avoid cache issues
     - name: Clean the build directory
@@ -37,3 +37,15 @@ jobs:
     - name: Test
       working-directory: ${{github.workspace}}/build
       run: ctest --output-on-failure -C ${{env.BUILD_TYPE}}
+
+    # Generate code coverage report
+    - name: Code coverage report
+      working-directory: ${{github.workspace}}/build
+      run: gcovr --root ${{github.workspace}} --exclude-directories "tests/" --branches --verbose --txt --output coverage.txt
+
+    # Upload the coverage report as an artifact
+    - name: Upload coverage report
+      uses: actions/upload-artifact@v3
+      with:
+        name: code-coverage-report
+        path: ${{github.workspace}}/build/coverage.txt
