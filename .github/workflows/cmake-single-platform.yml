@@ -1,4 +1,4 @@
-name: CMake on Linux
+name: Build and Test
 
 on:
   push:
@@ -7,7 +7,6 @@ on:
     branches: [ "main" ]
 
 env:
-  # Customize the CMake build type here (Debug to enable coverage)
   BUILD_TYPE: Debug
 
 jobs:
@@ -19,9 +18,9 @@ jobs:
 
     # Install dependencies
     - name: Install dependencies on Ubuntu
-      run: sudo apt-get update && sudo apt-get install -y libcmocka-dev gcovr gcc
+      run: sudo apt-get update && sudo apt-get install -y libcmocka-dev gcc
 
-    # Delete the CMake build directory to avoid cache issues
+    # Clean the build directory
     - name: Clean the build directory
       run: rm -rf ${{github.workspace}}/build
 
@@ -38,14 +37,9 @@ jobs:
       working-directory: ${{github.workspace}}/build
       run: ctest --output-on-failure -C ${{env.BUILD_TYPE}}
 
-    # Generate code coverage report
-    - name: Code coverage report
-      working-directory: ${{github.workspace}}/build
-      run: gcovr --root ${{github.workspace}} --exclude-directories "tests/" --branches --verbose --txt --output coverage.txt
-
-    # Upload the coverage report as an artifact
-    - name: Upload coverage report
+    # Save build artifacts
+    - name: Upload build artifacts
       uses: actions/upload-artifact@v3
       with:
-        name: code-coverage-report
-        path: ${{github.workspace}}/build/coverage.txt
+        name: build-artifacts
+        path: ${{github.workspace}}/build
