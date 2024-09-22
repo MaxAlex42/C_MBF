@@ -1,0 +1,27 @@
+# Ignore IDE-related files
+.idea/
+
+# Ignore build artifacts
+build/
+
+# Ignore coverage and gcov files
+*.gcda
+*.gcno
+*.gcov
+
+# Ignore any executables and object files
+*.o
+*.exe
+*.out
+*.obj
+
+# Ignore CMake build files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Ignore other temporary or binary files
+*.log
+*.tmp
+*.bak
