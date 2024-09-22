@@ -9,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/lib_test.dir/gcd.c.o.d"
   "CMakeFiles/lib_test.dir/linked-list.c.o"
   "CMakeFiles/lib_test.dir/linked-list.c.o.d"
+  "CMakeFiles/lib_test.dir/test-arrays.c.o"
+  "CMakeFiles/lib_test.dir/test-arrays.c.o.d"
   "CMakeFiles/lib_test.dir/test.c.o"
   "CMakeFiles/lib_test.dir/test.c.o.d"
   "lib_test"

@@ -1,29 +1,39 @@
-Start testing: Sep 20 19:17 CEST
+Start testing: Sep 22 21:12 CEST
 ----------------------------------------------------------
 1/1 Testing: lib_test
 1/1 Test: lib_test
 Command: "/home/maxi/Github Projects/C_MBF/build/lib_test"
 Directory: /home/maxi/Github Projects/C_MBF/build
-"lib_test" start time: Sep 20 19:17 CEST
+"lib_test" start time: Sep 22 21:12 CEST
 Output:
 ----------------------------------------------------------
-[==========] tests: Running 4 test(s).
+[==========] array_tests: Running 9 test(s).
 [ RUN      ] test_quick_sort_i
 [       OK ] test_quick_sort_i
+[ RUN      ] test_bubble_sort_i
+[       OK ] test_bubble_sort_i
+[ RUN      ] test_insertion_sort_i
+[       OK ] test_insertion_sort_i
+[ RUN      ] test_selection_sort_i
+[       OK ] test_selection_sort_i
 [ RUN      ] test_sum_i
 [       OK ] test_sum_i
 [ RUN      ] test_max_i
 [       OK ] test_max_i
 [ RUN      ] test_min_i
 [       OK ] test_min_i
-[==========] tests: 4 test(s) run.
-[  PASSED  ] 4 test(s).
+[ RUN      ] test_quick_sort_f
+[       OK ] test_quick_sort_f
+[ RUN      ] test_bubble_sort_f
+[       OK ] test_bubble_sort_f
+[==========] array_tests: 9 test(s) run.
+[  PASSED  ] 9 test(s).
 <end of output>
 Test time =   0.00 sec
 ----------------------------------------------------------
 Test Passed.
-"lib_test" end time: Sep 20 19:17 CEST
+"lib_test" end time: Sep 22 21:12 CEST
 "lib_test" time elapsed: 00:00:00
 ----------------------------------------------------------
 
-End testing: Sep 20 19:17 CEST
+End testing: Sep 22 21:12 CEST

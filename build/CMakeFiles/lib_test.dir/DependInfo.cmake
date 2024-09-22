@@ -13,6 +13,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/maxi/Github Projects/C_MBF/arrays.c" "CMakeFiles/lib_test.dir/arrays.c.o" "gcc" "CMakeFiles/lib_test.dir/arrays.c.o.d"
   "/home/maxi/Github Projects/C_MBF/gcd.c" "CMakeFiles/lib_test.dir/gcd.c.o" "gcc" "CMakeFiles/lib_test.dir/gcd.c.o.d"
   "/home/maxi/Github Projects/C_MBF/linked-list.c" "CMakeFiles/lib_test.dir/linked-list.c.o" "gcc" "CMakeFiles/lib_test.dir/linked-list.c.o.d"
+  "/home/maxi/Github Projects/C_MBF/test-arrays.c" "CMakeFiles/lib_test.dir/test-arrays.c.o" "gcc" "CMakeFiles/lib_test.dir/test-arrays.c.o.d"
   "/home/maxi/Github Projects/C_MBF/test.c" "CMakeFiles/lib_test.dir/test.c.o" "gcc" "CMakeFiles/lib_test.dir/test.c.o.d"
   )
 

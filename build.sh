@@ -23,5 +23,9 @@ cmake --build . || { echo "Build failed"; exit 1; }
 echo "Running the tests..."
 cmake --build . --target run_tests || { echo "Tests failed"; exit 1; }
 
+# Run gcovr to show coverage results in the terminal
+echo "Generating code coverage report..."
+cmake --build . --target coverage || { echo "Coverage report generation failed"; exit 1; }
+
 # Optionally, return to the original directory
 cd ..

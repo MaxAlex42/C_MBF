@@ -45,4 +45,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/lib_test.dir/DependInfo.cmake"
   "CMakeFiles/run_tests.dir/DependInfo.cmake"
+  "CMakeFiles/coverage.dir/DependInfo.cmake"
+  "CMakeFiles/clean_coverage.dir/DependInfo.cmake"
   )

@@ -152,6 +152,32 @@ run_tests/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/run_tests.dir/build.make CMakeFiles/run_tests.dir/build
 .PHONY : run_tests/fast
 
+#=============================================================================
+# Target rules for targets named coverage
+
+# Build rule for target.
+coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 coverage
+.PHONY : coverage
+
+# fast build rule for target.
+coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/coverage.dir/build.make CMakeFiles/coverage.dir/build
+.PHONY : coverage/fast
+
+#=============================================================================
+# Target rules for targets named clean_coverage
+
+# Build rule for target.
+clean_coverage: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean_coverage
+.PHONY : clean_coverage
+
+# fast build rule for target.
+clean_coverage/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/clean_coverage.dir/build.make CMakeFiles/clean_coverage.dir/build
+.PHONY : clean_coverage/fast
+
 PrimeTest.o: PrimeTest.c.o
 .PHONY : PrimeTest.o
 
@@ -272,6 +298,30 @@ linked-list.c.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_test.dir/build.make CMakeFiles/lib_test.dir/linked-list.c.s
 .PHONY : linked-list.c.s
 
+test-arrays.o: test-arrays.c.o
+.PHONY : test-arrays.o
+
+# target to build an object file
+test-arrays.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_test.dir/build.make CMakeFiles/lib_test.dir/test-arrays.c.o
+.PHONY : test-arrays.c.o
+
+test-arrays.i: test-arrays.c.i
+.PHONY : test-arrays.i
+
+# target to preprocess a source file
+test-arrays.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_test.dir/build.make CMakeFiles/lib_test.dir/test-arrays.c.i
+.PHONY : test-arrays.c.i
+
+test-arrays.s: test-arrays.c.s
+.PHONY : test-arrays.s
+
+# target to generate assembly for a file
+test-arrays.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/lib_test.dir/build.make CMakeFiles/lib_test.dir/test-arrays.c.s
+.PHONY : test-arrays.c.s
+
 test.o: test.c.o
 .PHONY : test.o
 
@@ -305,6 +355,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... clean_coverage"
+	@echo "... coverage"
 	@echo "... run_tests"
 	@echo "... lib_test"
 	@echo "... PrimeTest.o"
@@ -322,6 +374,9 @@ help:
 	@echo "... linked-list.o"
 	@echo "... linked-list.i"
 	@echo "... linked-list.s"
+	@echo "... test-arrays.o"
+	@echo "... test-arrays.i"
+	@echo "... test-arrays.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

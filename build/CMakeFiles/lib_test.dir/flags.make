@@ -6,5 +6,5 @@ C_DEFINES =
 
 C_INCLUDES = -I"/home/maxi/Github Projects/C_MBF/includes"
 
-C_FLAGS = -g -Wall
+C_FLAGS =  --coverage -g -Wall
 
